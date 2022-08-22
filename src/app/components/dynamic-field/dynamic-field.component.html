@@ -1,0 +1,12 @@
+<ng-container [formGroup]="form"]>
+    <ng-container [ngSwitch]="props?.type">
+        <label [attr.for]="props.name">{{props.label}}</label>
+        <input *ngSwitchCase="'text'" [attr.type]="props.type" class="form-control" [formControlName]="props.name">
+        <input *ngSwitchCase="'date'" [attr.type]="props.type" class="form-control" [formControlName]="props.name">
+        <select *ngSwitchCase="'combo'" class="form-control" [formControlName]="props.name">
+            <ng-container *ngFor="let option of props.options">
+                <option [attr.value]="option.value">{{option.label}}</option>
+            </ng-container>
+        </select>
+    </ng-container>
+</ng-container>

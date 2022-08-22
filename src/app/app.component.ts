@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { Form, FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms';
 import { formatDate } from '@angular/common';
-import { DynamicFieldComponent } from './comps/dynamic-field/dynamic-field.component';
+import { DynamicFieldComponent } from './components/dynamic-field/dynamic-field.component';
 
 @Component({
   selector: 'app-root',
